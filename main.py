@@ -1,7 +1,8 @@
 from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
+import os
 
-TOKEN = "8316089455:AAGfVqlJYcSgqIJJ8rX-rOh_7YIh7NyVIL4"
+TOKEN = os.getenv("8316089455:AAGfVqlJYcSgqIJJ8rX-rOh_7YIh7NyVIL4")
 ADMIN_ID = 914333160   # 🔔 ADMIN ID
 
 users = {}        # user_id: {"name": str, "state": str}
@@ -127,6 +128,7 @@ def main():
     app.add_handler(CommandHandler("start", start))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, text_handler))
     print("🤖 Bot ishga tushdi")
+
 
 
 
