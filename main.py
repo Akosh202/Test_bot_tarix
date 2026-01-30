@@ -1,8 +1,7 @@
 from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
-import os
 
-TOKEN = os.getenv(8316089455:AAGfVqlJYcSgqIJJ8rX-rOh_7YIh7NyVIL4)
+TOKEN = "8316089455:AAGfVqlJYcSgqIJJ8rX-rOh_7YIh7NyVIL4"
 ADMIN_ID = 914333160   # 🔔 ADMIN ID
 
 users = {}        # user_id: {"name": str, "state": str}
@@ -132,6 +131,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
